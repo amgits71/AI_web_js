@@ -14,6 +14,14 @@ export const illustration = {
   alt: "gpt3",
 };
 
+export const peopleImg = {
+  img: {
+    src: "./assets/img/people.png",
+    alt: "people",
+  },
+  text: "1,600 человек запросило доступ за последние 24 часа",
+};
+
 export const header =
   "Построим Что&#8209;нибудь Невероятное с GPT&#8209;4 OpenAI";
 
@@ -25,4 +33,5 @@ export const heroData = {
   description,
   heroCtaButtons,
   illustration,
+  peopleImg,
 };
