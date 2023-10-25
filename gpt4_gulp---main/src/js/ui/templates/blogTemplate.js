@@ -35,25 +35,25 @@ export const createArticle = ({className, title, date, link, img}) => {
   export const blogTemplate = (blogArticleData) => {
     
     console.log(blogArticleData);
-    const leftArticles = [];
-    const rightArticles = [];
-    blogArticleData.forEach((article, i, blogArticleData) => {
-        if (article.className === "container_blog_part_left") {
-            leftArticles.push(article);
-        } else {
-            rightArticles.push(article);
-        }
-    })
+    //const leftArticles = [];
+    //const rightArticles = [];
+    // blogArticleData.forEach((article, i, blogArticleData) => {
+    //     if (article.className === "container_blog_part_left") {
+    //         leftArticles.push(article);
+    //     } else {
+    //         rightArticles.push(article);
+    //     }
+    // })
 
-    // const leftArticles = blogArticleData.filter((article) => article.className === "container_blog_part_left");
-    // const rightArticles = blogArticleData.filter((article) => article.className === 'container_blog_part');
+    const leftArticles = blogArticleData.filter((article) => article.className === "container_blog_part_left");
+    const rightArticles = blogArticleData.filter((article) => article.className === 'container_blog_part');
 
     const leftArticlesTemplate = leftArticles
-      .map((blogArticleData) => createArticle(blogArticleData))
+      .map((articleData) => createArticle(articleData))
       .join("");
     
     const rightArticlesTemplate = rightArticles
-      .map((blogArticleData) => createArticle(blogArticleData))
+      .map((articleData) => createArticle(articleData))
       .join("");
 
     return `

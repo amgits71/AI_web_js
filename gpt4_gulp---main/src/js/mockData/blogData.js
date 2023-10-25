@@ -12,7 +12,6 @@ const blogArticleData = [
             text: "Читать полную статью",
         },
     },
-
     {
         className: "container_blog_part",
         img: {
@@ -26,7 +25,6 @@ const blogArticleData = [
             text: "Читать полную статью",
         },
     },
-    
     {
         className: "container_blog_part",
         img: {
@@ -40,7 +38,6 @@ const blogArticleData = [
             text: "Читать полную статью",
         },
     },
-
     {
         className: "container_blog_part",
         img: {
@@ -54,7 +51,6 @@ const blogArticleData = [
             text: "Читать полную статью",
         },
     },
-
     {
         className: "container_blog_part",
         img: {
