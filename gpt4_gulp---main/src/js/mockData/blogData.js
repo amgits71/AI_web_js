@@ -66,6 +66,9 @@ const blogArticleData = [
     }
 ];
 
-export const blogData = {blogArticleData}
+export const blogHeaderData =
+  "Многое Происходит, Мы Ведем об Этом Блог.";
+
+export const blogData = {blogArticleData, blogHeaderData};
 
 export default blogData;

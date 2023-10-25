@@ -1,8 +1,14 @@
+export const createHeaderTemplate = (header) => {
+    return `
+        <h1 class="blog_header">${header}</h1>
+    `;
+};
+
 export const createBlogImage = ({ src, alt }) => {
     return `
         <img class="article_img" src="${src}" alt="${alt}"/>     
       `;
-  };
+};
 
 export const createBlogDescription = ({
     date, 
@@ -14,7 +20,7 @@ export const createBlogDescription = ({
         <h3 class="article_title">${title}</h3>
         <a href="${href}" class="read_all_article">${text}</a>
     `;
-}
+};
 
 export const createArticle = ({className, title, date, link, img}) => {
     const blogImgTemplate = createBlogImage(img);
@@ -32,9 +38,9 @@ export const createArticle = ({className, title, date, link, img}) => {
     `;
 }
   
-  export const blogTemplate = (blogArticleData) => {
-    
-    console.log(blogArticleData);
+  export const blogTemplate = ({blogArticleData, blogHeaderData}) => {
+    const headerTemplate = createHeaderTemplate(blogHeaderData);
+    console.log(headerTemplate);
     //const leftArticles = [];
     //const rightArticles = [];
     // blogArticleData.forEach((article, i, blogArticleData) => {
@@ -46,7 +52,7 @@ export const createArticle = ({className, title, date, link, img}) => {
     // })
 
     const leftArticles = blogArticleData.filter((article) => article.className === "container_blog_part_left");
-    const rightArticles = blogArticleData.filter((article) => article.className === 'container_blog_part');
+    const rightArticles = blogArticleData.filter((article) => article.className === "container_blog_part");
 
     const leftArticlesTemplate = leftArticles
       .map((articleData) => createArticle(articleData))
@@ -57,6 +63,7 @@ export const createArticle = ({className, title, date, link, img}) => {
       .join("");
 
     return `
+        ${headerTemplate}
         <div class="container_blog">
             ${leftArticlesTemplate}
             ${rightArticlesTemplate}
