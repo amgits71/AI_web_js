@@ -5,6 +5,7 @@ import initWhatIsGpt from "./../components/initWhatIsGpt.js";
 import initFutureHere from "./../components/initFutureHere.js";
 import initExpectations from "../components/initExpectations.js";
 import initCTA from "../components/initCTA.js";
+import initBlog from "../components/initBlog.js";
 
 import initBurger from "./../components/initBurger.js";
 
@@ -17,6 +18,7 @@ const initHomePage = (element) => {
     <section class="section future_here"></section>
     <section class="section exceed_expectations"></section>
     <section class="section CTA"></section>
+    <section class="section blog_section"></section>
   `;
 
   element.insertAdjacentHTML("beforeend", template);
@@ -45,6 +47,7 @@ const homePage = () => {
   
   initExpectations();
   initCTA();
+  initBlog();
 
   // инициализация бургера для адаптивного меню
   initBurger();

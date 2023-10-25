@@ -27,7 +27,6 @@ export const createDescriptionTemplate = ({
         </p>
         <a href="${href}" class="left__cta">${text}</a>
     </div>
-    Запросить ранний доступ
     `;
 }
 
