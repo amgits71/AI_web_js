@@ -730,6 +730,7 @@ p {
 
 .footer_section .container_footer_main {
   background: #031B34;
+  margin: 0 -9rem;
 }
 
 .footer_text {
@@ -795,6 +796,7 @@ p {
   display: flex;
   justify-content: center;
   color: #fff;
+  background: #040e1c;
 }
 
 /* Медиа запросы для адаптива */
@@ -980,6 +982,10 @@ p {
     width: 90%;
   }
 
+  .footer_section .container_footer_main {
+    margin: 0;
+  }
+
   .footer_section .container_footer_main_bottom .container_footer_side .column_footer_side {
     margin-right: 4rem;
   }
@@ -1095,6 +1101,7 @@ p {
 
   .blog_section .container_blog .container_blog_part {
     flex-direction: row;
+    justify-content: center;
     column-gap: 2rem;
   }
 

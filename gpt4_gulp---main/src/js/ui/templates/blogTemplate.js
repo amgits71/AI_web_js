@@ -40,7 +40,6 @@ export const createArticle = ({className, title, date, link, img}) => {
   
   export const blogTemplate = ({blogArticleData, blogHeaderData}) => {
     const headerTemplate = createHeaderTemplate(blogHeaderData);
-    console.log(headerTemplate);
     //const leftArticles = [];
     //const rightArticles = [];
     // blogArticleData.forEach((article, i, blogArticleData) => {

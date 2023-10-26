@@ -6,6 +6,7 @@ import initFutureHere from "./../components/initFutureHere.js";
 import initExpectations from "../components/initExpectations.js";
 import initCTA from "../components/initCTA.js";
 import initBlog from "../components/initBlog.js";
+import initFooter from "../components/initFooter.js";
 
 import initBurger from "./../components/initBurger.js";
 
@@ -19,6 +20,7 @@ const initHomePage = (element) => {
     <section class="section exceed_expectations"></section>
     <section class="section CTA"></section>
     <section class="section blog_section"></section>
+    <section class="section footer_section"></section>
   `;
 
   element.insertAdjacentHTML("beforeend", template);
@@ -48,6 +50,7 @@ const homePage = () => {
   initExpectations();
   initCTA();
   initBlog();
+  initFooter();
 
   // инициализация бургера для адаптивного меню
   initBurger();
