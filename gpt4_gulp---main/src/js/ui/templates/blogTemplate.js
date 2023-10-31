@@ -51,21 +51,45 @@ export const createArticle = ({className, title, date, link, img}) => {
     // })
 
     const leftArticles = blogArticleData.filter((article) => article.className === "container_blog_part_left");
-    const rightArticles = blogArticleData.filter((article) => article.className === "container_blog_part");
+    let rightArticles = blogArticleData.filter((article) => article.className === "container_blog_img_text");
 
     const leftArticlesTemplate = leftArticles
       .map((articleData) => createArticle(articleData))
       .join("");
     
-    const rightArticlesTemplate = rightArticles
-      .map((articleData) => createArticle(articleData))
-      .join("");
+    // const rightArticlesArray = rightArticles
+    //    .map(articleData)
+    //    .join("");
+
+    const secondaryLeftArticles = [];
+    for (let i = 0; i < rightArticles.length/2; i++) {
+        secondaryLeftArticles.push(rightArticles[i])
+        console.log(rightArticles[i]);
+    }
+    
+    const secondaryRightArticles = [];
+    for (let i = rightArticles.length/2; i < rightArticles.length; i++) {
+        secondaryRightArticles.push(rightArticles[i])
+    }
+    
+    const secondaryLeftArticlesTemplate = secondaryLeftArticles
+        .map((articleData) => createArticle(articleData))
+        .join("");
+
+    const secondaryRightArticlesTemplate = secondaryRightArticles
+        .map((articleData) => createArticle(articleData))
+        .join("");
 
     return `
         ${headerTemplate}
         <div class="container_blog">
             ${leftArticlesTemplate}
-            ${rightArticlesTemplate}
+            <div class="container_blog_part">
+                ${secondaryLeftArticlesTemplate}
+            </div>
+            <div class="container_blog_part">
+                ${secondaryRightArticlesTemplate}
+            </div>
         </div>
     `;
   };

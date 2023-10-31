@@ -674,11 +674,6 @@ p {
   padding: 1rem 2rem;
 }
 
-
-.blog_section .container_blog .container_blog_text .read_all_article {
-  margin-top: 2rem;
-}
-
 .blog_section .container_blog .article_title {
   font-size: 20px;
   font-weight: 800;
@@ -689,12 +684,13 @@ p {
   color: #fff;
 }
 
-.blog_section .container_blog .read_all_article {
+.blog_section .container_blog_part .read_all_article {
   color: #fff;
+  margin-top: 2rem;
 }
 
 .blog_section .container_blog_part_left .read_all_article {
-  margin-top: 15.5rem;
+  margin-top: 18.5rem;
   color: #fff;
 }
 

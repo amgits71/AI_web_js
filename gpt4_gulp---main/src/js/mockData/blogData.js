@@ -13,7 +13,7 @@ const blogArticleData = [
         },
     },
     {
-        className: "container_blog_part",
+        className: "container_blog_img_text",
         img: {
             src: "./assets/img/articles/article_2.png",
             alt: "article photo",
@@ -26,7 +26,7 @@ const blogArticleData = [
         },
     },
     {
-        className: "container_blog_part",
+        className: "container_blog_img_text",
         img: {
             src: "./assets/img/articles/article_3.png",
             alt: "article photo",
@@ -39,7 +39,7 @@ const blogArticleData = [
         },
     },
     {
-        className: "container_blog_part",
+        className: "container_blog_img_text",
         img: {
             src: "./assets/img/articles/article_4.png",
             alt: "article photo",
@@ -52,7 +52,7 @@ const blogArticleData = [
         },
     },
     {
-        className: "container_blog_part",
+        className: "container_blog_img_text",
         img: {
             src: "./assets/img/articles/article_5.png",
             alt: "article photo",
